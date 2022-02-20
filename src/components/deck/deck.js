@@ -174,7 +174,11 @@ const Deck = forwardRef(
         ? {}
         : {
             left: () => stepBackward(),
-            right: () => stepForward()
+            right: () => stepForward(), 
+            space: () => stepForward(),
+            enter: () => stepForward(),
+            up: () => stepBackward(), 
+            down: () => stepForward()
           },
       []
     );
