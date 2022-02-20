@@ -26,6 +26,9 @@ import { useAutoPlay } from '../../utils/use-auto-play';
 import defaultTheme from '../../theme/default-theme';
 import { defaultTransition } from '../transitions';
 
+import { useToggleFullScreen } from '../../hooks/use-full-screen';
+
+
 export const DeckContext = createContext();
 const noop = () => {};
 
@@ -169,6 +172,8 @@ const Deck = forwardRef(
       ]
     );
 
+    const toggleFullScreen = useToggleFullScreen();
+
     useMousetrap(
       disableInteractivity
         ? {}
@@ -178,7 +183,8 @@ const Deck = forwardRef(
             space: () => stepForward(),
             enter: () => stepForward(),
             up: () => stepBackward(), 
-            down: () => stepForward()
+            down: () => stepForward(),
+            'f': () => toggleFullScreen()
           },
       []
     );
@@ -188,6 +194,7 @@ const Deck = forwardRef(
       setState: skipTo,
       ...queryStringMapFns
     });
+
 
     useEffect(() => {
       const initialView = syncLocation({
