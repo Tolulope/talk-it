@@ -1,32 +1,49 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
+import awo from './awo.png'; // Tell Webpack this JS file uses this image
+import higi from './higi.png';
+import mfcc from './mfcc.png';
+import asrhmm from './asrhmm.png';
+import hmmallnums from './hmmallnums.jpeg';
+import hmmglob from './hmmglob.jpeg';
+import hmmtwo from './hmmtwo.png';
+import w2v2 from './w2v2.jpeg';
+// import w2v from './w2v.png';
+import asrneural from './asrneural.png';
+// import ctc from './ctc.png';
+// import ctc1 from './ctc1.png';
+import ctc2 from './ctc2.png';
+import study1 from './study1.png';
+// import study2 from './study2.png';
+import study2c from './study2c.png';
+import myw2v from './wav2vec2.png';
+
+
+
+
 import {
   FlexBox,
   Heading,
-  SpectacleLogo,
   UnorderedList,
-  CodeSpan,
-  OrderedList,
   ListItem,
   FullScreen,
   Progress,
   Appear,
-  Stepper,
   Slide,
   Deck,
   Text,
   Grid,
   Box,
   Image,
-  CodePane,
-  MarkdownSlide,
-  MarkdownSlideSet,
-  Notes
+  Notes,
+  Link
 } from 'spectacle';
 
-const formidableLogo =
-  'https://static.wikia.nocookie.net/logopedia/images/8/8f/Transformers%3B_Rise_of_the_Beasts_%28Symbol%29.svg/revision/latest?cb=20211028101812';
+// const formidableLogo =
+//   'https://avatars2.githubusercontent.com/u/5078602?s=280&v=4';
+
 
 // SPECTACLE_CLI_THEME_START
 const theme = {
@@ -55,51 +72,332 @@ const template = () => (
 );
 // SPECTACLE_CLI_TEMPLATE_END
 
-const SlideFragments = () => (
-  <>
-    <Slide>
-      <Text>This is a slide fragment.</Text>
-    </Slide>
-    <Slide>
-      <Text>This is also a slide fragment.</Text>
-      <Appear>
-        <Text>This item shows up!</Text>
-      </Appear>
-      <Appear>
-        <Text>This item also shows up!</Text>
-      </Appear>
-    </Slide>
-  </>
-);
+// const SlideFragments = () => (
+//   <>
+//     <Slide>
+//       <Text>This is a slide fragment.</Text>
+//     </Slide>
+//     <Slide>
+//       <Text>This is also a slide fragment.</Text>
+//       <Appear>
+//         <Text>This item shows up!</Text>
+//       </Appear>
+//       <Appear>
+//         <Text>This item also shows up!</Text>
+//       </Appear>
+//     </Slide>
+//   </>
+// );
 
 const Presentation = () => (
   <Deck theme={theme} template={template}>
-    <Slide>
-      <FlexBox height="100%">
-        <SpectacleLogo size={500} />
+
+<Slide
+      backgroundColor="tertiary"
+      backgroundImage="url(https://source.unsplash.com/lZCHy8PLyyo/1600x900)"
+      backgroundOpacity={0.7}
+    >
+      <FlexBox height="100%" flexDirection="column">
+        <Heading margin="0px" color="primary" fontSize="75px">
+          <i>An evaluation and analysis of fine-tuned representations for code-switched low-resource speech recognition</i>
+        </Heading>
+        <Heading margin="0px" color="primary" fontSize="h2">
+          Tolúlọpẹ́ Ògúnrẹ̀mí
+        </Heading>
+        {/* <Heading margin="0px 32px" color="primary" fontSize="h3">
+          Where you can write your decks in JSX, Markdown, or MDX!
+        </Heading> */}
       </FlexBox>
       <Notes>
-        Spectacle supports notes per slide.
+        Hello everyone! 
+      </Notes>
+    </Slide>
+
+
+    <Slide>
+      <Heading>We will cover:</Heading>
+      <UnorderedList>
+         <Appear>
+          <ListItem>What code-switching and code-mixing are</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Data used</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>
+            Models trained
+          </ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>
+            Similarites of representations
+            <ul>
+              <ListItem>
+                To speech features
+              </ListItem>
+
+              <ListItem>
+                To vector representations of text
+              </ListItem>
+
+            </ul>
+
+          </ListItem>
+        </Appear>
+    
+
+        {/* <Appear>
+          <ListItem>
+            How to get started with ASR!
+          </ListItem>
+        </Appear> */}
+
+
+      </UnorderedList>
+    </Slide> 
+
+
+{/* 
+<Slide>
+        <Heading fontSize="h3"> What is code-switching?</Heading>
+
+        <UnorderedList>
+        <Appear>
+          <ListItem>Fine-tuned wav2vec 2.0 XLSR</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Resulting models are fine-tuned primarily on monolingual data (Yorùbá and Nigerian English)</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>
+            A small, code-switched dataset was created for experiments. Instances are from Yorùbá Nollywood film and Yorùbá News Broadcasts.
+          </ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>
+           No lexicon or language model.
+          </ListItem>
+        </Appear>
+      </UnorderedList>
+
+    </Slide> */}
+
+
+  <Slide>
+
+  <Heading fontSize="h3"> Low resource code switched ASR</Heading>
+
+  <Grid
+    flex={1}
+    gridTemplateColumns="100%"
+    gridTemplateRows="20% 80%"
+    height="70%"
+    >
+    <Box>
+    {/* <Text fontSize="14px" textAlign="center" style={{padding: 0}}>Image from <Link target="_blank" fontSize="14px" href="https://jonathan-hui.medium.com/speech-recognition-asr-model-training-90ed50d93615">source</Link></Text>        */}
+    <Text fontSize="28px" textAlign="center"> Fine-tuned wav2vec 2.0 XLSR </Text>       
+    </Box>
+    <Box style={{display: 'flex', justifyContent: 'center'}}>
+    <Image width="60%" height="100%" src={myw2v} alt="Mfcc creation" />
+    </Box>
+  </Grid>
+
+  <Notes>
+  </Notes>
+
+</Slide>
+
+
+<Slide>
+
+  <Heading fontSize="h3"> Low resource code switched ASR</Heading>
+
+  <Grid
+    flex={1}
+    gridTemplateColumns="100%"
+    gridTemplateRows="20% 80%"
+    height="70%"
+    >
+    <Box>
+    {/* <Text fontSize="14px" textAlign="center" style={{padding: 0}}>Image from <Link target="_blank" fontSize="14px" href="https://jonathan-hui.medium.com/speech-recognition-asr-model-training-90ed50d93615">source</Link></Text>        */}
+    <Text fontSize="28px" textAlign="center"> Resulting models are fine-tuned primarily on monolingual data (Yorùbá and Nigerian English) </Text>       
+    </Box>
+    <Box style={{display: 'flex', justifyContent: 'center'}}>
+    <Image width="60%" height="100%" src={study1} alt="Mfcc creation" />
+    </Box>
+  </Grid>
+
+  <Notes>
+  </Notes>
+
+</Slide>
+
+
+<Slide>
+
+  <Heading fontSize="h3" margin="0px"> Low resource code switched ASR</Heading>
+
+  <Grid
+    flex={1}
+    gridTemplateColumns="100%"
+    gridTemplateRows="20% 80%"
+    height="80%"
+    >
+    <Box>
+    {/* <Text fontSize="14px" textAlign="center" style={{padding: 0}}>Image from <Link target="_blank" fontSize="14px" href="https://jonathan-hui.medium.com/speech-recognition-asr-model-training-90ed50d93615">source</Link></Text>        */}
+    <Text fontSize="28px" textAlign="center"> A small, code-switched dataset was created for experiments. Instances are from Yorùbá Nollywood film and Yorùbá News Broadcasts. </Text>       
+    </Box>
+    <Box style={{display: 'flex', justifyContent: 'center'}}>
+    <iframe width="60%" height="100%" src="https://www.youtube.com/embed/nDIvaW7rPXo?start=76" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </Box>
+  </Grid>
+
+  <Notes>
+  </Notes>
+
+</Slide>
+
+    {/* <Slide>
+        <Heading fontSize="h3" > Zero resource code switching</Heading>
+
+        <UnorderedList>
+        <Appear>
+          <ListItem>Fine-tuned wav2vec 2.0 XLSR</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Resulting models are fine-tuned primarily on monolingual data (Yorùbá and Nigerian English)</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>
+            A small, code-switched dataset was created for experiments. Instances are from Yorùbá Nollywood film and Yorùbá News Broadcasts.
+          </ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>
+           No lexicon or language model.
+          </ListItem>
+        </Appear>
+      </UnorderedList>
+
+    </Slide> */}
+
+
+
+
+
+  <Slide>
+      <Heading fontSize="h3"> Low resource code switched ASR</Heading>
+
+      <UnorderedList>
+      <Appear>
+          <ListItem>
+           No lexicon or language model.
+          </ListItem>
+       </Appear>
+      <Appear>
+        <ListItem>Evidence of latent phonetic representation in the model</ListItem>
+        <ul>
+            <ListItem>
+            mock -> mọrk
+            </ListItem>
+
+            <ListItem>
+            america -> a mẹrika
+            </ListItem>
+
+            <ListItem>
+            she’s a  -> ṣhe  is  a
+            </ListItem>
+          </ul>
+      </Appear>
+      {/* <Appear>
+        <ListItem>Ran linear and neural probes on the data and found code-switching detection</ListItem>
+      </Appear> */}
+    </UnorderedList>
+
+  </Slide>
+
+  <Slide>
+
+  <Heading fontSize="h3"> Zero resource code switching</Heading>
+
+  <Grid
+    flex={1}
+    gridTemplateColumns="100%"
+    gridTemplateRows="20% 80%"
+    height="70%"
+    >
+    <Box>
+    {/* <Text fontSize="14px" textAlign="center" style={{padding: 0}}>Image from <Link target="_blank" fontSize="14px" href="https://jonathan-hui.medium.com/speech-recognition-asr-model-training-90ed50d93615">source</Link></Text>        */}
+    <Text fontSize="28px" textAlign="center"> Ran linear and neural probes on the data and found code-switching detection </Text>       
+    </Box>
+    <Box style={{display: 'flex', justifyContent: 'center'}}>
+    <Image width="85%" height="100%" src={study2c} alt="Mfcc creation" />
+    </Box>
+  </Grid>
+
+  <Notes>
+  </Notes>
+
+</Slide>
+
+
+
+  <Slide>
+      <FlexBox height="100%" flexDirection="column">
+        <Heading margin="0px" fontSize="150px">
+          <i>Thank you!</i>
+        </Heading>
+        <Heading margin="0px" fontSize="h6">
+          {/* <Link target="_blank" href="https://bit.ly/adesfa-asr"> Check out links on everything covered here. </Link>. */}
+        </Heading>
+      </FlexBox>
+      <Notes>
+        Spectacle supports notes per slide again.
         <ol>
           <li>Notes can now be HTML markup!</li>
           <li>Lists can make it easier to make points.</li>
+          <li>Let's see of this works....</li>
         </ol>
       </Notes>
     </Slide>
-    <Slide>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {/* <Slide>
       <FlexBox height="100%" flexDirection="column">
         <Heading margin="0px" fontSize="150px">
-          <i>Tiny Transformers</i> 
+          ✨<i>Spectacle</i> ✨
         </Heading>
         <Heading margin="0px" fontSize="h2">
-          Are they useful in the low resource setting?
+          A ReactJS Presentation Library
         </Heading>
         <Heading margin="0px 32px" color="primary" fontSize="h3">
-          Kind of!
+          Where you can write your decks in JSX, Markdown, or MDX!
         </Heading>
       </FlexBox>
-    </Slide>
-    <Slide
+      <Notes>
+        Spectacle supports notes per slide again.
+        <ol>
+          <li>Notes can now be HTML markup!</li>
+          <li>Lists can make it easier to make points.</li>
+          <li>Let's see of this works....</li>
+        </ol>
+      </Notes>
+    </Slide> */}
+
+
+    {/* <Slide
       transition={{
         from: {
           transform: 'scale(0.5) rotate(45deg)',
@@ -155,8 +453,10 @@ const Presentation = () => (
           </ListItem>
         </Appear>
       </OrderedList>
-    </Slide>
-    <Slide>
+    </Slide> */}
+
+
+    {/* <Slide>
       <FlexBox>
         <Text>These</Text>
         <Text>Text</Text>
@@ -186,9 +486,15 @@ const Presentation = () => (
             </FlexBox>
           ))}
       </Grid>
-    </Slide>
-    <SlideFragments />
-    <Slide>
+    </Slide> */}
+
+
+
+
+    {/* <SlideFragments /> */}
+
+
+    {/* <Slide>
       <CodePane language="jsx">{`
         import { createClient, Provider } from 'urql';
 
@@ -208,21 +514,28 @@ const Presentation = () => (
           }
         }
         `}</CodePane>
-    </Slide>
-    <div>
+    </Slide> */}
+
+
+    {/* <div>
       <Slide>
         <Heading>This is a slide embedded in a div</Heading>
       </Slide>
-    </div>
-    <MarkdownSlide componentProps={{ color: 'yellow' }}>
+    </div> */}
+
+
+
+    {/* <MarkdownSlide componentProps={{ color: 'yellow' }}>
       {`
         # This is a Markdown Slide
 
         - You can pass props down to all elements on the slide.
         - Just use the \`componentProps\` prop.
         `}
-    </MarkdownSlide>
-    <MarkdownSlide animateListItems>
+    </MarkdownSlide> */}
+
+
+    {/* <MarkdownSlide animateListItems>
       {`
        # This is also a Markdown Slide
 
@@ -232,8 +545,10 @@ const Presentation = () => (
        - ...will appear...
        - ...one at a time.
       `}
-    </MarkdownSlide>
-    <Slide>
+    </MarkdownSlide> */}
+
+
+    {/* <Slide>
       <Grid
         flex={1}
         gridTemplateColumns="50% 50%"
@@ -258,14 +573,18 @@ const Presentation = () => (
           <Box width={200} height={200} backgroundColor="secondary" />
         </FlexBox>
       </Grid>
-    </Slide>
-    <MarkdownSlideSet>
+    </Slide> */}
+
+
+
+    {/* <MarkdownSlideSet>
       {`
         # This is the first slide of a Markdown Slide Set
         ---
         # This is the second slide of a Markdown Slide Set
         `}
-    </MarkdownSlideSet>
+    </MarkdownSlideSet> */}
+
   </Deck>
 );
 
