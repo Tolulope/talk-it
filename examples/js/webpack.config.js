@@ -22,6 +22,10 @@ module.exports = {
   resolve: {
     alias: {
       spectacle: path.resolve(__dirname, '../../src')
+    },
+    fallback: {
+      "assert": false,
+      "util": false
     }
   }
 };

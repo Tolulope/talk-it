@@ -2,19 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-import awo from './awo.png'; // Tell Webpack this JS file uses this image
-import higi from './higi.png';
-import mfcc from './mfcc.png';
-import asrhmm from './asrhmm.png';
-import hmmallnums from './hmmallnums.jpeg';
-import hmmglob from './hmmglob.jpeg';
-import hmmtwo from './hmmtwo.png';
-import w2v2 from './w2v2.jpeg';
+// import awo from './awo.png'; // Tell Webpack this JS file uses this image
+// import higi from './higi.png';
+// import mfcc from './mfcc.png';
+// import asrhmm from './asrhmm.png';
+// import hmmallnums from './hmmallnums.jpeg';
+// import hmmglob from './hmmglob.jpeg';
+// import hmmtwo from './hmmtwo.png';
+// import w2v2 from './w2v2.jpeg';
 // import w2v from './w2v.png';
-import asrneural from './asrneural.png';
+// import asrneural from './asrneural.png';
 // import ctc from './ctc.png';
 // import ctc1 from './ctc1.png';
-import ctc2 from './ctc2.png';
+// import ctc2 from './ctc2.png';
 import study1 from './study1.png';
 // import study2 from './study2.png';
 import study2c from './study2c.png';
@@ -256,7 +256,6 @@ const Presentation = () => (
   </Notes>
 
 </Slide>
-
     {/* <Slide>
         <Heading fontSize="h3" > Zero resource code switching</Heading>
 
@@ -347,9 +346,6 @@ const Presentation = () => (
       <FlexBox height="100%" flexDirection="column">
         <Heading margin="0px" fontSize="150px">
           <i>Thank you!</i>
-        </Heading>
-        <Heading margin="0px" fontSize="h6">
-          {/* <Link target="_blank" href="https://bit.ly/adesfa-asr"> Check out links on everything covered here. </Link>. */}
         </Heading>
       </FlexBox>
       <Notes>
