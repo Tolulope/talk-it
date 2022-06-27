@@ -15,7 +15,7 @@ module.exports = {
   externals: {},
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Tiny Transformers: Are they useful?',
+      title: 'ASR for low-resource code-switching',
       template: `./index.html`
     })
   ],

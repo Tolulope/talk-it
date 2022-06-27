@@ -20,6 +20,15 @@ import study1 from './study1.png';
 import study2c from './study2c.png';
 import myw2v from './wav2vec2.png';
 
+import multimap from './multilingual.png';
+import cspos from './cs-pos.png'
+import yormap from './map_yoruba.jpg'
+import data from './data.png'
+import trans from './transcriptions.png'
+import results from './results.png'
+import resultsprobe from './resprobe.png'
+
+
 
 
 
@@ -89,6 +98,7 @@ const template = () => (
 //   </>
 // );
 
+
 const Presentation = () => (
   <Deck theme={theme} template={template}>
 
@@ -99,7 +109,7 @@ const Presentation = () => (
     >
       <FlexBox height="100%" flexDirection="column">
         <Heading margin="0px" color="primary" fontSize="75px">
-          <i>An evaluation and analysis of fine-tuned representations for code-switched low-resource speech recognition</i>
+          <i>Speech recognition of low-resource code-switching</i>
         </Heading>
         <Heading margin="0px" color="primary" fontSize="h2">
           Tolúlọpẹ́ Ògúnrẹ̀mí
@@ -114,7 +124,7 @@ const Presentation = () => (
     </Slide>
 
 
-    <Slide>
+    {/* <Slide>
       <Heading>We will cover:</Heading>
       <UnorderedList>
          <Appear>
@@ -144,43 +154,171 @@ const Presentation = () => (
 
           </ListItem>
         </Appear>
-    
-
-        {/* <Appear>
-          <ListItem>
-            How to get started with ASR!
-          </ListItem>
-        </Appear> */}
-
 
       </UnorderedList>
-    </Slide> 
+    </Slide>  */}
 
 
-{/* 
+
+
+
 <Slide>
         <Heading fontSize="h3"> What is code-switching?</Heading>
 
-        <UnorderedList>
-        <Appear>
-          <ListItem>Fine-tuned wav2vec 2.0 XLSR</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Resulting models are fine-tuned primarily on monolingual data (Yorùbá and Nigerian English)</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>
-            A small, code-switched dataset was created for experiments. Instances are from Yorùbá Nollywood film and Yorùbá News Broadcasts.
-          </ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>
-           No lexicon or language model.
-          </ListItem>
-        </Appear>
-      </UnorderedList>
+        <Box>
+          <Text fontSize="56px" textAlign="center"> The mixing of words, phrases and sentences from two distinct grammatical (sub) systems across sentence boundaries within 
+                                                  the same speech event. </Text>
+          <Text fontSize="28px" textAlign="center"> (Bokomba, 1988) </Text>         
+        </Box>
+        <Box>
+          <Text fontSize="56px" textAlign="center" color="secondary"> I'll tell you exactly when I have to leave, at ten o'clock.
+        Y son las nueve y cuarto. </Text>
+        </Box>
+        
+      
+</Slide>
 
-    </Slide> */}
+<Slide>
+        <Heading fontSize="h3"> What is code-mixing?</Heading>
+
+        <Box>
+          <Text fontSize="56px" textAlign="center"> The change of one language to another within the same utterance or in the same oral/written text. </Text>       
+          <Text fontSize="28px" textAlign="center"> (Ho, 2007) </Text>         
+        </Box>
+
+        <Box>
+          <Text fontSize="56px" textAlign="center" color="secondary">  "Pero WHY do I have to go a la casa?" </Text>
+        </Box>
+      
+</Slide>
+
+<Slide>
+        <Heading fontSize="h3"> Why is it important?</Heading>
+        <Box style={{display: 'flex', justifyContent: 'center'}}>
+          <Image width="75%" height="100%" src={multimap} alt="Map of multilingual populations" />
+        </Box> 
+        <Text fontSize="46px" textAlign="center">Most of the world is multilingual. </Text>       
+
+</Slide>
+
+<Slide>
+<Heading fontSize="h3"> Why is hard to solve?</Heading>
+
+<Grid
+    flex={1}
+    gridTemplateColumns="100%"
+    gridTemplateRows="80% 20%"
+    height="80%"
+    >
+        <Box style={{display: 'flex', justifyContent: 'center'}}>
+          <Image width="75%" height="100%" src={cspos} alt="Map of multilingual populations" />
+        </Box> 
+        <Box>
+        <Text fontSize="46px" textAlign="center">We have to rethink language modelling</Text> 
+        </Box> 
+    </Grid>     
+</Slide>
+
+<Slide>
+      <Heading fontSize="h3" margin="0px"> Which language am I focussed on?</Heading>
+
+    <Grid
+    flex={1}
+    gridTemplateColumns="60% 40%"
+    gridTemplateRows="100% 100%"
+    height="100%"
+  >
+      <UnorderedList>
+
+      <Appear>
+        <ListItem>Yorùbá</ListItem>
+        <ul>
+            <ListItem>
+             44.5+ million speakers       
+            </ListItem>
+
+            <ListItem>
+            Spoken in Nigeria, Benin, Brazil + the diaspora
+            </ListItem>
+
+            <ListItem>
+            A tonal language with an orthographic representation: tonal marks on vowels
+
+            </ListItem>
+
+            <ListItem>
+            Not used in educational environments in Nigeria
+            </ListItem>
+
+          </ul>
+      </Appear>
+    </UnorderedList>
+
+    <Box style={{display: 'flex', justifyContent: 'center'}}>
+      <Image width="100%" height="70%" src={yormap} alt="Map of multilingual populations" />
+    </Box> 
+
+    </Grid>
+  </Slide>
+
+<Slide>
+
+<Heading fontSize="h3">What is Speech?</Heading>
+
+
+  <Grid
+    flex={1}
+    gridTemplateColumns="50% 50%"
+    gridTemplateRows="100% 100%"
+    height="100%"
+  >
+    <FlexBox alignItems="center" justifyContent="center">
+    <iframe width="90%" height="100%" src="https://www.youtube.com/embed/ANHvP6v3DYE" title="Awo Praat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </FlexBox>
+    <FlexBox alignItems="center" justifyContent="center">
+    <iframe width="90%" height="100%" src="https://www.youtube.com/embed/RI2Pgh8Jfkk" title="Higi haga Praat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+    </FlexBox>
+  </Grid>
+</Slide>
+
+
+{/* 
+ <Slide>
+      <Heading>The task</Heading>
+      <UnorderedList>
+         <Appear>
+          <ListItem>ASR on code-switched speech</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>Data used</ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>
+            Models trained
+          </ListItem>
+        </Appear>
+        <Appear>
+          <ListItem>
+            Similarites of representations
+            <ul>
+              <ListItem>
+                To speech features
+              </ListItem>
+
+              <ListItem>
+                To vector representations of text
+              </ListItem>
+
+            </ul>
+
+          </ListItem>
+        </Appear>
+
+      </UnorderedList>
+    </Slide>  */}
+
+
+
 
 
   <Slide>
@@ -190,15 +328,14 @@ const Presentation = () => (
   <Grid
     flex={1}
     gridTemplateColumns="100%"
-    gridTemplateRows="20% 80%"
-    height="70%"
+    gridTemplateRows="80% 20%"
+    height="80%"
     >
-    <Box>
-    {/* <Text fontSize="14px" textAlign="center" style={{padding: 0}}>Image from <Link target="_blank" fontSize="14px" href="https://jonathan-hui.medium.com/speech-recognition-asr-model-training-90ed50d93615">source</Link></Text>        */}
-    <Text fontSize="28px" textAlign="center"> Fine-tuned wav2vec 2.0 XLSR </Text>       
-    </Box>
     <Box style={{display: 'flex', justifyContent: 'center'}}>
     <Image width="60%" height="100%" src={myw2v} alt="Mfcc creation" />
+    </Box>
+    <Box>
+    <Text fontSize="46px" textAlign="center"> Fine-tuned wav2vec 2.0 XLSR </Text>       
     </Box>
   </Grid>
 
@@ -206,6 +343,29 @@ const Presentation = () => (
   </Notes>
 
 </Slide>
+ 
+<Slide>
+
+<Heading fontSize="h3"> Data used </Heading>
+
+<Grid
+  flex={1}
+  gridTemplateColumns="100%"
+  gridTemplateRows="80% 20%"
+  height="80%"
+  >
+  <Box style={{display: 'flex', justifyContent: 'center'}}>
+  <Image width="100%" height="100%" src={data} alt="Mfcc creation" />
+  </Box>
+</Grid>
+
+<Notes>
+</Notes>
+
+</Slide>
+
+
+
 
 
 <Slide>
@@ -215,15 +375,17 @@ const Presentation = () => (
   <Grid
     flex={1}
     gridTemplateColumns="100%"
-    gridTemplateRows="20% 80%"
+    gridTemplateRows="100%"
     height="70%"
     >
-    <Box>
-    {/* <Text fontSize="14px" textAlign="center" style={{padding: 0}}>Image from <Link target="_blank" fontSize="14px" href="https://jonathan-hui.medium.com/speech-recognition-asr-model-training-90ed50d93615">source</Link></Text>        */}
-    <Text fontSize="28px" textAlign="center"> Resulting models are fine-tuned primarily on monolingual data (Yorùbá and Nigerian English) </Text>       
-    </Box>
+  
     <Box style={{display: 'flex', justifyContent: 'center'}}>
     <Image width="60%" height="100%" src={study1} alt="Mfcc creation" />
+    </Box>
+
+    <Box>
+    {/* <Text fontSize="14px" textAlign="center" style={{padding: 0}}>Image from <Link target="_blank" fontSize="14px" href="https://jonathan-hui.medium.com/speech-recognition-asr-model-training-90ed50d93615">source</Link></Text>        */}
+    {/* <Text fontSize="28px" textAlign="center"> Resulting models are fine-tuned primarily on monolingual data (Yorùbá and Nigerian English) </Text>        */}
     </Box>
   </Grid>
 
@@ -316,9 +478,55 @@ const Presentation = () => (
 
   </Slide>
 
+
   <Slide>
 
-  <Heading fontSize="h3"> Zero resource code switching</Heading>
+  <Heading fontSize="h3"> Produced transcriptions</Heading>
+
+  <Grid
+    flex={1}
+    gridTemplateColumns="100%"
+    gridTemplateRows="100%"
+    height="70%"
+    >
+  
+    <Box style={{display: 'flex', justifyContent: 'center'}}>
+    <Image width="60%" height="100%" src={trans} alt="Mfcc creation" />
+    </Box>
+
+    <Box>
+    {/* <Text fontSize="14px" textAlign="center" style={{padding: 0}}>Image from <Link target="_blank" fontSize="14px" href="https://jonathan-hui.medium.com/speech-recognition-asr-model-training-90ed50d93615">source</Link></Text>        */}
+    {/* <Text fontSize="28px" textAlign="center"> Resulting models are fine-tuned primarily on monolingual data (Yorùbá and Nigerian English) </Text>        */}
+    </Box>
+  </Grid>
+
+  <Notes>
+  </Notes>
+
+</Slide>
+
+<Slide>
+
+<Heading fontSize="h3"> Results</Heading>
+
+<Grid
+  flex={1}
+  gridTemplateColumns="100%"
+  gridTemplateRows="100%"
+  height="70%"
+  >
+
+  <Box style={{display: 'flex', justifyContent: 'center'}}>
+  <Image width="60%" height="100%" src={results} alt="Mfcc creation" />
+  </Box>
+
+</Grid>
+
+</Slide>
+
+  <Slide>
+
+  <Heading fontSize="h3"> Can the model tell if an utterance is code-switched?</Heading>
 
   <Grid
     flex={1}
@@ -339,6 +547,42 @@ const Presentation = () => (
   </Notes>
 
 </Slide>
+
+
+<Slide>
+
+<Heading fontSize="h3"> Results</Heading>
+
+<Grid
+  flex={1}
+  gridTemplateColumns="100%"
+  gridTemplateRows="100%"
+  height="70%"
+  >
+
+  <Box style={{display: 'flex', justifyContent: 'center'}}>
+  <Image width="60%" height="100%" src={resultsprobe} alt="Mfcc creation" />
+  </Box>
+
+</Grid>
+
+</Slide>
+
+<Slide>
+      <FlexBox height="100%" flexDirection="column">
+        <Heading margin="0px" fontSize="150px">
+          <i>Conclusions</i>
+        </Heading>
+      </FlexBox>
+      <Notes>
+        Spectacle supports notes per slide again.
+        <ol>
+          <li>Notes can now be HTML markup!</li>
+          <li>Lists can make it easier to make points.</li>
+          <li>Let's see of this works....</li>
+        </ol>
+      </Notes>
+    </Slide>
 
 
 
