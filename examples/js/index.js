@@ -143,7 +143,7 @@ const Presentation = () => (
 
 
     <Slide>
-      <Heading  margin="0px 32px" color="primary" fontSize="h3">Oultine</Heading>
+      <Heading  margin="0px 32px" color="primary" fontSize="h3">Outline</Heading>
       <UnorderedList>
 
           <ListItem>Motivation</ListItem>
@@ -228,7 +228,7 @@ const Presentation = () => (
         <Box style={{display: 'flex', justifyContent: 'center'}}>
           <Image width="75%" height="100%" src={datatab} alt="Map of multilingual populations" />
         </Box> 
-        <Text fontSize="30px" textAlign="center">SelfMA dataset (2019) and randomly selected Tumblr post</Text>       
+        <Text fontSize="30px" textAlign="center">SelfMA dataset (2019) and randomly selected Tumblr posts</Text>       
 
 </Slide>
 
@@ -363,7 +363,7 @@ const Presentation = () => (
 
 <Slide>
 
-  <Heading fontSize="h3"> Results</Heading>
+  <Heading fontSize="h3"> Results - All</Heading>
 
   <Grid
     flex={1}
@@ -398,8 +398,7 @@ const Presentation = () => (
           </ListItem>
        </Appear>
       <Appear>
-        <ListItem fontSize="40px">We want to understand the false positive results and the potential harm the model could
-cause.</ListItem>
+        <ListItem fontSize="40px">We want to understand the false positive results and the potential harm the model could cause.</ListItem>
       </Appear>
       <Appear>
         <ListItem fontSize="40px">We automatically label 256,843 tweets for gender and 373,631 tweets for race.</ListItem>
@@ -449,7 +448,7 @@ administrative office”</Text>
           </ListItem>
        </Appear>
       <Appear>
-        <ListItem fontSize="40px">word2vec and FastText work almost as well as each other in this method</ListItem>
+        <ListItem fontSize="40px">word2vec and FastText work almost as well as each other with this method</ListItem>
       </Appear>
       <Appear>
         <ListItem fontSize="40px">We were able to use this method to detect possible microaggresisons 'in the wild'.</ListItem>
