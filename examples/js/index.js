@@ -41,6 +41,10 @@ import resall from './res-all.png'
 
 import basetab from './tab-baseline.png'
 
+import nazanin from './nazanin.jpg'
+import valerio from './valerio.jpg'
+import tommaso from './tommaso.jpg'
+
 
 
 
@@ -138,7 +142,28 @@ const Presentation = () => (
 
     <Slide>
       <Heading  margin="0px 32px" color="primary" fontSize="h3">Leveraging Bias in Pre-trained Word Embeddings for Unsupervised Microaggression Detection</Heading>
-        <Text> Joint work with</Text>
+        <Text fontSize="36px"> Joint work with</Text>
+        <Grid
+      flex={1}
+      gridTemplateColumns="33% 33% 33%"
+      gridTemplateRows="100%"
+      height="100%"
+      >
+        <Box style={{display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center'}}>
+        <Image style={{borderRadius: '50%'}} width="50%" height="75%" src={nazanin} alt="Mfcc creation" />
+        <Text fontSize="36px"> Nazanin Sabri</Text>
+        </Box>
+
+        <Box style={{display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center'}}>
+        <Image style={{borderRadius: '50%'}} width="50%" height="75%" src={valerio} alt="Mfcc creation" />
+        <Text fontSize="36px"> Valerio Basile</Text>
+        </Box>
+
+        <Box style={{display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center'}}>
+        <Image style={{borderRadius: '50%'}} width="50%" height="75%" src={tommaso} alt="Mfcc creation" />
+        <Text fontSize="36px"> Tommaso Caselli</Text>
+        </Box>
+      </Grid>
     </Slide> 
 
 
@@ -255,11 +280,17 @@ const Presentation = () => (
 
 <Slide>
         <Heading fontSize="h3">Baseline</Heading>
+        <Grid
+        flex={1}
+        gridTemplateColumns="100%"
+        gridTemplateRows="80% 20%"
+        height="80%"
+  >
         <Box style={{display: 'flex', justifyContent: 'center'}}>
-          <Image width="80%" height="80%" src={basetab} alt="Map of multilingual populations" />
-        </Box> 
-        <Text fontSize="30px" textAlign="center">Support Vector Machine on Data</Text>       
-
+          <Image width="80%" height="100%" src={basetab} alt="Map of multilingual populations" />
+        </Box>
+        <Text fontSize="30px" textAlign="center">Support Vector Machine on Data</Text>   
+        </Grid>    
 </Slide>
 
 
