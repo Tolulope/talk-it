@@ -5,15 +5,15 @@ export default {
     maxCodePaneHeight: 200
   },
   colors: {
-    primary: '#ebe5da',
-    secondary: '#fc6986',
-    tertiary: '#1e2852',
-    quaternary: '#ffc951',
-    quinary: '#8bddfd'
+    primary: '#38A3A5',
+    secondary: '#22577A',
+    tertiary: '#FFFFFF',
+    quaternary: '#DB3A34',
+    quinary: '#EE6352'
   },
   fonts: {
-    header: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-    text: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+    header: '"Roboto Mono", Roboto, Arial, sans-serif',
+    text: '"Roboto Mono", Roboto, Arial, sans-serif',
     monospace: '"Consolas", "Menlo", monospace'
   },
   fontSizes: {

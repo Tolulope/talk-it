@@ -15,7 +15,7 @@ module.exports = {
   externals: {},
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'ASR for low-resource code-switching',
+      title: 'Fighting Bias with Bias: Unsupervised Microaggression Detection',
       template: `./index.html`
     })
   ],

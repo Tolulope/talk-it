@@ -28,6 +28,18 @@ import trans from './transcriptions.png'
 import results from './results.png'
 import resultsprobe from './resprobe.png'
 
+import biasfig from './biasfig.jpg'
+import algtext from './algorithm-text.png'
+import algpho from './algorithm-pho.png'
+import empic from './embedding-pic.png'
+
+import datatab from './data-table.png'
+
+import resgender from './res-gender.png'
+import resrace from './res-race.png'
+import resall from './res-all.png'
+
+import basetab from './tab-baseline.png'
 
 
 
@@ -57,8 +69,8 @@ import {
 // SPECTACLE_CLI_THEME_START
 const theme = {
   fonts: {
-    header: '"Open Sans Condensed", Helvetica, Arial, sans-serif',
-    text: '"Open Sans Condensed", Helvetica, Arial, sans-serif'
+    header: '"Roboto Mono", Roboto, Arial, sans-serif',
+    text: '"Roboto Mono", Roboto, Arial, sans-serif'
   }
 };
 // SPECTACLE_CLI_THEME_END
@@ -104,15 +116,15 @@ const Presentation = () => (
 
 <Slide
       backgroundColor="tertiary"
-      backgroundImage="url(https://source.unsplash.com/lZCHy8PLyyo/1600x900)"
+      // backgroundImage="url(https://source.unsplash.com/lZCHy8PLyyo/1600x900)"
       backgroundOpacity={0.7}
     >
       <FlexBox height="100%" flexDirection="column">
         <Heading margin="0px" color="primary" fontSize="75px">
-          <i>Speech recognition of low-resource code-switching</i>
+          <i>Fighting Bias with Bias: Unsupervised Microaggression Detection</i>
         </Heading>
-        <Heading margin="0px" color="primary" fontSize="h2">
-          Tolúlọpẹ́ Ògúnrẹ̀mí
+        <Heading margin="0px" color="primary" fontSize="36px">
+          Tolúlọpẹ́ Ògúnrẹ̀mí, Nazanin Sabri, Valerio Basile, Tommaso Caselli
         </Heading>
         {/* <Heading margin="0px 32px" color="primary" fontSize="h3">
           Where you can write your decks in JSX, Markdown, or MDX!
@@ -124,206 +136,149 @@ const Presentation = () => (
     </Slide>
 
 
-    {/* <Slide>
-      <Heading>We will cover:</Heading>
+    <Slide>
+      <Heading  margin="0px 32px" color="primary" fontSize="h3">Leveraging Bias in Pre-trained Word Embeddings for Unsupervised Microaggression Detection</Heading>
+        <Text> Joint work with</Text>
+    </Slide> 
+
+
+    <Slide>
+      <Heading  margin="0px 32px" color="primary" fontSize="h3">Oultine</Heading>
       <UnorderedList>
          <Appear>
-          <ListItem>What code-switching and code-mixing are</ListItem>
+          <ListItem>Motivation</ListItem>
         </Appear>
         <Appear>
-          <ListItem>Data used</ListItem>
+          <ListItem>Background</ListItem>
         </Appear>
         <Appear>
           <ListItem>
-            Models trained
+            Data
           </ListItem>
         </Appear>
         <Appear>
           <ListItem>
-            Similarites of representations
-            <ul>
-              <ListItem>
-                To speech features
-              </ListItem>
+            Algorithm
+          </ListItem>
+        </Appear>
 
-              <ListItem>
-                To vector representations of text
-              </ListItem>
+        <Appear>
+          <ListItem>
+           Results
+          </ListItem>
+        </Appear>
 
-            </ul>
-
+        <Appear>
+          <ListItem>
+            Conclusions
           </ListItem>
         </Appear>
 
       </UnorderedList>
-    </Slide>  */}
+    </Slide> 
+
 
 
 
 
 
 <Slide>
-        <Heading fontSize="h3"> What is code-switching?</Heading>
+        <Heading fontSize="h3"> What is a microaggresison?</Heading>
 
         <Box>
-          <Text fontSize="56px" textAlign="center"> The mixing of words, phrases and sentences from two distinct grammatical (sub) systems across sentence boundaries within 
-                                                  the same speech event. </Text>
-          <Text fontSize="28px" textAlign="center"> (Bokomba, 1988) </Text>         
+          <Text fontSize="48px" textAlign="center"> Microaggressions are brief, everyday exchanges that denigrate stigmatised and culturally marginalised groups. </Text>
+          <Text fontSize="20px" textAlign="center"> (Mariam-Webster) </Text>         
         </Box>
         <Box>
-          <Text fontSize="56px" textAlign="center" color="secondary"> I'll tell you exactly when I have to leave, at ten o'clock.
-        Y son las nueve y cuarto. </Text>
+          <Text fontSize="48px" textAlign="center" color="secondary"> They are subtle manifestations of bias  (Breitfeller et al., 2019). </Text>
         </Box>
         
       
 </Slide>
 
 <Slide>
-        <Heading fontSize="h3"> What is code-mixing?</Heading>
+        <Heading fontSize="h3"> What is a microaggresison?</Heading>
 
         <Box>
-          <Text fontSize="56px" textAlign="center"> The change of one language to another within the same utterance or in the same oral/written text. </Text>       
-          <Text fontSize="28px" textAlign="center"> (Ho, 2007) </Text>         
+          <Text fontSize="48px" textAlign="center"> They are not always perceived as hurtful by either party, and they can often be detected as positive statements by current hate-speech detection systems. </Text>
+          <Text fontSize="20px" textAlign="center"> (Breitfeller et al., 2019) </Text>         
         </Box>
-
         <Box>
-          <Text fontSize="56px" textAlign="center" color="secondary">  "Pero WHY do I have to go a la casa?" </Text>
+          <Text fontSize="48px" textAlign="center" color="secondary"> E.g. "You speak English so well!" </Text>
         </Box>
+        
       
 </Slide>
 
+
+{/* <Slide>
+        <Heading fontSize="h3"> Word embeddings are biased</Heading>
+
+        <Box>
+          <Text fontSize="48px" textAlign="center"> They are not always perceived as hurtful by either party, and they can often be detected as positive statements by current hate-speech detection systems. </Text>
+          <Text fontSize="20px" textAlign="center"> (Caliskan et al., 2016; Bolukbasi et al., 2016; Garg et al., 2017) </Text>         
+        </Box>
+        <Box>
+          <Text fontSize="48px" textAlign="center" color="secondary"> E.g. "You speak English so well!" </Text>
+        </Box>
+        
+      
+</Slide> */}
+
+
 <Slide>
-        <Heading fontSize="h3"> Why is it important?</Heading>
-        <Box style={{display: 'flex', justifyContent: 'center'}}>
-          <Image width="75%" height="100%" src={multimap} alt="Map of multilingual populations" />
+        <Heading fontSize="h3"> Word embeddings are biased</Heading>
+        <Box style={{display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center'}}>
+          <Image width="65%" height="65%" src={biasfig} alt="Map of multilingual populations" />
+          <Text fontSize="30px" textAlign="center">(Caliskan et al., 2016; Bolukbasi et al., 2016; Garg et al., 2017) </Text>       
         </Box> 
-        <Text fontSize="46px" textAlign="center">Most of the world is multilingual. </Text>       
 
 </Slide>
 
+
 <Slide>
-<Heading fontSize="h3"> Why is hard to solve?</Heading>
+        <Heading fontSize="h3">Data</Heading>
+        <Box style={{display: 'flex', justifyContent: 'center'}}>
+          <Image width="75%" height="100%" src={datatab} alt="Map of multilingual populations" />
+        </Box> 
+        <Text fontSize="30px" textAlign="center">SelfMA dataset (2019) and randomly selected Tumblr post</Text>       
+
+</Slide>
+
+
+
+<Slide>
+<Heading fontSize="h3"> Word Embeddings Used</Heading>
 
 <Grid
     flex={1}
     gridTemplateColumns="100%"
-    gridTemplateRows="80% 20%"
-    height="80%"
+    gridTemplateRows="70% 30%"
+    height="100%"
     >
         <Box style={{display: 'flex', justifyContent: 'center'}}>
-          <Image width="75%" height="100%" src={cspos} alt="Map of multilingual populations" />
+          <Image width="60%" height="80%" src={empic} alt="Map of multilingual populations" />
         </Box> 
-        <Box>
-        <Text fontSize="46px" textAlign="center">We have to rethink language modelling</Text> 
+        <Box  style={{padding: 0}}>
+        <Text fontSize="30px" textAlign="center">GloVe, word2vec, FastText</Text> 
+        <Text fontSize="20px" textAlign="center">Image from <a href='https://jalammar.github.io/illustrated-word2vec/'>The Illustrated Word2Vec</a></Text> 
         </Box> 
     </Grid>     
 </Slide>
 
 <Slide>
-      <Heading fontSize="h3" margin="0px"> Which language am I focussed on?</Heading>
+        <Heading fontSize="h3">Baseline</Heading>
+        <Box style={{display: 'flex', justifyContent: 'center'}}>
+          <Image width="80%" height="80%" src={basetab} alt="Map of multilingual populations" />
+        </Box> 
+        <Text fontSize="30px" textAlign="center">Support Vector Machine on Data</Text>       
 
-    <Grid
-    flex={1}
-    gridTemplateColumns="60% 40%"
-    gridTemplateRows="100% 100%"
-    height="100%"
-  >
-      <UnorderedList>
-
-      <Appear>
-        <ListItem>Yorùbá</ListItem>
-        <ul>
-            <ListItem>
-             44.5+ million speakers       
-            </ListItem>
-
-            <ListItem>
-            Spoken in Nigeria, Benin, Brazil + the diaspora
-            </ListItem>
-
-            <ListItem>
-            A tonal language with an orthographic representation: tonal marks on vowels
-
-            </ListItem>
-
-            <ListItem>
-            Not used in educational environments in Nigeria
-            </ListItem>
-
-          </ul>
-      </Appear>
-    </UnorderedList>
-
-    <Box style={{display: 'flex', justifyContent: 'center'}}>
-      <Image width="100%" height="70%" src={yormap} alt="Map of multilingual populations" />
-    </Box> 
-
-    </Grid>
-  </Slide>
-
-<Slide>
-
-<Heading fontSize="h3">What is Speech?</Heading>
-
-
-  <Grid
-    flex={1}
-    gridTemplateColumns="50% 50%"
-    gridTemplateRows="100% 100%"
-    height="100%"
-  >
-    <FlexBox alignItems="center" justifyContent="center">
-    <iframe width="90%" height="100%" src="https://www.youtube.com/embed/ANHvP6v3DYE" title="Awo Praat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </FlexBox>
-    <FlexBox alignItems="center" justifyContent="center">
-    <iframe width="90%" height="100%" src="https://www.youtube.com/embed/RI2Pgh8Jfkk" title="Higi haga Praat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
-    </FlexBox>
-  </Grid>
 </Slide>
-
-
-{/* 
- <Slide>
-      <Heading>The task</Heading>
-      <UnorderedList>
-         <Appear>
-          <ListItem>ASR on code-switched speech</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Data used</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>
-            Models trained
-          </ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>
-            Similarites of representations
-            <ul>
-              <ListItem>
-                To speech features
-              </ListItem>
-
-              <ListItem>
-                To vector representations of text
-              </ListItem>
-
-            </ul>
-
-          </ListItem>
-        </Appear>
-
-      </UnorderedList>
-    </Slide>  */}
-
-
-
 
 
   <Slide>
 
-  <Heading fontSize="h3"> Low resource code switched ASR</Heading>
+  <Heading fontSize="h3"> Algorithm</Heading>
 
   <Grid
     flex={1}
@@ -332,10 +287,7 @@ const Presentation = () => (
     height="80%"
     >
     <Box style={{display: 'flex', justifyContent: 'center'}}>
-    <Image width="60%" height="100%" src={myw2v} alt="Mfcc creation" />
-    </Box>
-    <Box>
-    <Text fontSize="46px" textAlign="center"> Fine-tuned wav2vec 2.0 XLSR </Text>       
+    <Image width="70%" height="100%" src={algtext} alt="Mfcc creation" />
     </Box>
   </Grid>
 
@@ -346,7 +298,7 @@ const Presentation = () => (
  
 <Slide>
 
-<Heading fontSize="h3"> Data used </Heading>
+<Heading fontSize="h3"> Algorithm </Heading>
 
 <Grid
   flex={1}
@@ -355,7 +307,7 @@ const Presentation = () => (
   height="80%"
   >
   <Box style={{display: 'flex', justifyContent: 'center'}}>
-  <Image width="100%" height="100%" src={data} alt="Mfcc creation" />
+  <Image width="100%" height="100%" src={algpho} alt="Mfcc creation" />
   </Box>
 </Grid>
 
@@ -370,7 +322,7 @@ const Presentation = () => (
 
 <Slide>
 
-  <Heading fontSize="h3"> Low resource code switched ASR</Heading>
+  <Heading fontSize="h3"> Results - Gender</Heading>
 
   <Grid
     flex={1}
@@ -380,7 +332,7 @@ const Presentation = () => (
     >
   
     <Box style={{display: 'flex', justifyContent: 'center'}}>
-    <Image width="60%" height="100%" src={study1} alt="Mfcc creation" />
+    <Image width="80%" height="100%" src={resgender} alt="Mfcc creation" />
     </Box>
 
     <Box>
@@ -397,20 +349,22 @@ const Presentation = () => (
 
 <Slide>
 
-  <Heading fontSize="h3" margin="0px"> Low resource code switched ASR</Heading>
+  <Heading fontSize="h3"> Results - Race</Heading>
 
   <Grid
     flex={1}
     gridTemplateColumns="100%"
-    gridTemplateRows="20% 80%"
-    height="80%"
+    gridTemplateRows="100%"
+    height="70%"
     >
+  
+    <Box style={{display: 'flex', justifyContent: 'center'}}>
+    <Image width="80%" height="100%" src={resrace} alt="Mfcc creation" />
+    </Box>
+
     <Box>
     {/* <Text fontSize="14px" textAlign="center" style={{padding: 0}}>Image from <Link target="_blank" fontSize="14px" href="https://jonathan-hui.medium.com/speech-recognition-asr-model-training-90ed50d93615">source</Link></Text>        */}
-    <Text fontSize="28px" textAlign="center"> A small, code-switched dataset was created for experiments. Instances are from Yorùbá Nollywood film and Yorùbá News Broadcasts. </Text>       
-    </Box>
-    <Box style={{display: 'flex', justifyContent: 'center'}}>
-    <iframe width="60%" height="100%" src="https://www.youtube.com/embed/nDIvaW7rPXo?start=76" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    {/* <Text fontSize="28px" textAlign="center"> Resulting models are fine-tuned primarily on monolingual data (Yorùbá and Nigerian English) </Text>        */}
     </Box>
   </Grid>
 
@@ -418,171 +372,104 @@ const Presentation = () => (
   </Notes>
 
 </Slide>
-    {/* <Slide>
-        <Heading fontSize="h3" > Zero resource code switching</Heading>
-
-        <UnorderedList>
-        <Appear>
-          <ListItem>Fine-tuned wav2vec 2.0 XLSR</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Resulting models are fine-tuned primarily on monolingual data (Yorùbá and Nigerian English)</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>
-            A small, code-switched dataset was created for experiments. Instances are from Yorùbá Nollywood film and Yorùbá News Broadcasts.
-          </ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>
-           No lexicon or language model.
-          </ListItem>
-        </Appear>
-      </UnorderedList>
-
-    </Slide> */}
 
 
+<Slide>
+
+  <Heading fontSize="h3"> Results</Heading>
+
+  <Grid
+    flex={1}
+    gridTemplateColumns="100%"
+    gridTemplateRows="100%"
+    height="70%"
+    >
+  
+    <Box style={{display: 'flex', justifyContent: 'center'}}>
+    <Image width="80%" height="100%" src={resall} alt="Mfcc creation" />
+    </Box>
+
+    <Box>
+    {/* <Text fontSize="14px" textAlign="center" style={{padding: 0}}>Image from <Link target="_blank" fontSize="14px" href="https://jonathan-hui.medium.com/speech-recognition-asr-model-training-90ed50d93615">source</Link></Text>        */}
+    {/* <Text fontSize="28px" textAlign="center"> Resulting models are fine-tuned primarily on monolingual data (Yorùbá and Nigerian English) </Text>        */}
+    </Box>
+  </Grid>
+
+  <Notes>
+  </Notes>
+
+</Slide>
 
 
-
-  <Slide>
-      <Heading fontSize="h3"> Low resource code switched ASR</Heading>
+<Slide>
+      <Heading fontSize="h3"> Finding Microaggressions 'In The Wild'</Heading>
 
       <UnorderedList>
       <Appear>
-          <ListItem>
-           No lexicon or language model.
+          <ListItem fontSize="40px">
+          We use our unsupervised model to label unseen instances from another domain (Twitter)
           </ListItem>
        </Appear>
       <Appear>
-        <ListItem>Evidence of latent phonetic representation in the model</ListItem>
-        <ul>
-            <ListItem>
-            mock -> mọrk
-            </ListItem>
-
-            <ListItem>
-            america -> a mẹrika
-            </ListItem>
-
-            <ListItem>
-            she’s a  -> ṣhe  is  a
-            </ListItem>
-          </ul>
+        <ListItem fontSize="40px">We want to understand the false positive results and the potential harm the model could
+cause.</ListItem>
       </Appear>
-      {/* <Appear>
-        <ListItem>Ran linear and neural probes on the data and found code-switching detection</ListItem>
-      </Appear> */}
+      <Appear>
+        <ListItem fontSize="40px">We automatically label 256,843 tweets for gender and 373,631 tweets for race.</ListItem>
+      </Appear>
     </UnorderedList>
 
   </Slide>
 
+  <Slide>
+        <Heading fontSize="h3"> Finding Microaggressions 'In The Wild'</Heading>
+
+        <Box>
+          <Text fontSize="48px" textAlign="center"> Saying ”Arrested Development isn’t funny” in an office full of women just to
+feel something </Text>
+        </Box>
+        <Box>
+          <Text fontSize="48px" textAlign="center"> “Men have moustaches, women have oversized bracelets”</Text>
+        </Box>
+        
+      
+</Slide>
+
+<Slide>
+        <Heading fontSize="h3"> Finding Microaggressions 'In The Wild'</Heading>
+
+        <Box>
+          <Text fontSize="48px" textAlign="center"> “why are you being so dramatic? just say I’m not originally arab, you don’t have to fight about it” </Text>
+        </Box>
+        <Box>
+          <Text fontSize="48px" textAlign="center"> “I will need to explain that to the chinese old lady who works at my school’s
+administrative office”</Text>
+        </Box>
+        
+      
+</Slide>
+
+
+
 
   <Slide>
+      <Heading fontSize="h3"> Conclusions</Heading>
 
-  <Heading fontSize="h3"> Produced transcriptions</Heading>
+      <UnorderedList>
+      <Appear>
+          <ListItem fontSize="40px">
+          We have an interpretable, unsupervised algorithm to automatically detect microaggresisons.
+          </ListItem>
+       </Appear>
+      <Appear>
+        <ListItem fontSize="40px">word2vec and FastText work almost as well as each other in this method</ListItem>
+      </Appear>
+      <Appear>
+        <ListItem fontSize="40px">We were able to use this method to detect possible microaggresisons 'in the wild'.</ListItem>
+      </Appear>
+    </UnorderedList>
 
-  <Grid
-    flex={1}
-    gridTemplateColumns="100%"
-    gridTemplateRows="100%"
-    height="70%"
-    >
-  
-    <Box style={{display: 'flex', justifyContent: 'center'}}>
-    <Image width="60%" height="100%" src={trans} alt="Mfcc creation" />
-    </Box>
-
-    <Box>
-    {/* <Text fontSize="14px" textAlign="center" style={{padding: 0}}>Image from <Link target="_blank" fontSize="14px" href="https://jonathan-hui.medium.com/speech-recognition-asr-model-training-90ed50d93615">source</Link></Text>        */}
-    {/* <Text fontSize="28px" textAlign="center"> Resulting models are fine-tuned primarily on monolingual data (Yorùbá and Nigerian English) </Text>        */}
-    </Box>
-  </Grid>
-
-  <Notes>
-  </Notes>
-
-</Slide>
-
-<Slide>
-
-<Heading fontSize="h3"> Results</Heading>
-
-<Grid
-  flex={1}
-  gridTemplateColumns="100%"
-  gridTemplateRows="100%"
-  height="70%"
-  >
-
-  <Box style={{display: 'flex', justifyContent: 'center'}}>
-  <Image width="60%" height="100%" src={results} alt="Mfcc creation" />
-  </Box>
-
-</Grid>
-
-</Slide>
-
-  <Slide>
-
-  <Heading fontSize="h3"> Can the model tell if an utterance is code-switched?</Heading>
-
-  <Grid
-    flex={1}
-    gridTemplateColumns="100%"
-    gridTemplateRows="20% 80%"
-    height="70%"
-    >
-    <Box>
-    {/* <Text fontSize="14px" textAlign="center" style={{padding: 0}}>Image from <Link target="_blank" fontSize="14px" href="https://jonathan-hui.medium.com/speech-recognition-asr-model-training-90ed50d93615">source</Link></Text>        */}
-    <Text fontSize="28px" textAlign="center"> Ran linear and neural probes on the data and found code-switching detection </Text>       
-    </Box>
-    <Box style={{display: 'flex', justifyContent: 'center'}}>
-    <Image width="85%" height="100%" src={study2c} alt="Mfcc creation" />
-    </Box>
-  </Grid>
-
-  <Notes>
-  </Notes>
-
-</Slide>
-
-
-<Slide>
-
-<Heading fontSize="h3"> Results</Heading>
-
-<Grid
-  flex={1}
-  gridTemplateColumns="100%"
-  gridTemplateRows="100%"
-  height="70%"
-  >
-
-  <Box style={{display: 'flex', justifyContent: 'center'}}>
-  <Image width="60%" height="100%" src={resultsprobe} alt="Mfcc creation" />
-  </Box>
-
-</Grid>
-
-</Slide>
-
-<Slide>
-      <FlexBox height="100%" flexDirection="column">
-        <Heading margin="0px" fontSize="150px">
-          <i>Conclusions</i>
-        </Heading>
-      </FlexBox>
-      <Notes>
-        Spectacle supports notes per slide again.
-        <ol>
-          <li>Notes can now be HTML markup!</li>
-          <li>Lists can make it easier to make points.</li>
-          <li>Let's see of this works....</li>
-        </ol>
-      </Notes>
-    </Slide>
+  </Slide>
 
 
 
