@@ -145,35 +145,22 @@ const Presentation = () => (
     <Slide>
       <Heading  margin="0px 32px" color="primary" fontSize="h3">Oultine</Heading>
       <UnorderedList>
-         <Appear>
+
           <ListItem>Motivation</ListItem>
-        </Appear>
-        <Appear>
           <ListItem>Background</ListItem>
-        </Appear>
-        <Appear>
+
           <ListItem>
             Data
           </ListItem>
-        </Appear>
-        <Appear>
           <ListItem>
             Algorithm
           </ListItem>
-        </Appear>
-
-        <Appear>
           <ListItem>
            Results
           </ListItem>
-        </Appear>
-
-        <Appear>
           <ListItem>
             Conclusions
           </ListItem>
-        </Appear>
-
       </UnorderedList>
     </Slide> 
 
