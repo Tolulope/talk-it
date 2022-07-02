@@ -41,12 +41,11 @@ import resall from './res-all.png'
 
 import basetab from './tab-baseline.png'
 
-import nazanin from './nazanin.jpg'
-import valerio from './valerio.jpg'
-import tommaso from './tommaso.jpg'
+import irt from './irt.png'
+import kolawork from './kolawork.png'
+import chunwork from './chunwork.png'
 
-
-
+import pitchest from './pitchest.png'
 
 import {
   FlexBox,
@@ -144,18 +143,12 @@ const Presentation = () => (
       <Heading  margin="0px 32px" color="primary" fontSize="h3">Outline</Heading>
       <UnorderedList>
 
-          <ListItem>La lingua</ListItem>
-          <ListItem>Le lingue tonale</ListItem>
-          <ListItem> P </ListItem>
-          <ListItem>
-            Algorithm
-          </ListItem>
-          <ListItem>
-           Results
-          </ListItem>
-          <ListItem>
-            Conclusions
-          </ListItem>
+          <ListItem> La lingua</ListItem>
+          <ListItem> Le lingue tonale</ListItem>
+          <ListItem> Lavoro precedente </ListItem>
+          <ListItem> Dati </ListItem>
+          <ListItem> Metodi </ListItem>
+          <ListItem> Demonstrazione </ListItem>
       </UnorderedList>
     </Slide> 
 
@@ -190,7 +183,7 @@ const Presentation = () => (
             </ListItem>
       </Appear>
     </UnorderedList>
-
+    <Appear>
       <Grid
       flex={1}
       gridTemplateColumns="100%"
@@ -207,6 +200,7 @@ const Presentation = () => (
         <Image width="70%" height="70%" src={yormap} alt="Map of multilingual populations" />
       </Box> 
       </Grid>
+      </Appear>
   </Grid>
   </Slide>
 
@@ -257,8 +251,8 @@ const Presentation = () => (
 <Slide>
         <Heading fontSize="h3"> Lavoro precedente</Heading>
         <Box style={{display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center'}}>
-          <Image width="65%" height="65%" src={biasfig} alt="Map of multilingual populations" />
-          <Text fontSize="30px" textAlign="center">(Caliskan et al., 2016; Bolukbasi et al., 2016; Garg et al., 2017) </Text>       
+          <Image width="65%" height="130%" src={chunwork} alt="Map of multilingual populations" />
+          <Text fontSize="30px" textAlign="center"> Chun et al., 2011 </Text>       
         </Box> 
 
 </Slide>
@@ -267,21 +261,31 @@ const Presentation = () => (
 
 <Slide>
         <Heading fontSize="h3"> Lavoro precedente</Heading>
+        <Grid
+    flex={1}
+    gridTemplateColumns="100%"
+    gridTemplateRows="80% 20%"
+    height="90%"
+  >
         <Box style={{display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center'}}>
-          <Image width="65%" height="65%" src={biasfig} alt="Map of multilingual populations" />
-          <Text fontSize="30px" textAlign="center">(Caliskan et al., 2016; Bolukbasi et al., 2016; Garg et al., 2017) </Text>       
+          <Image width="60%" height="90%" src={kolawork} alt="Map of multilingual populations" />
+          <Text fontSize="30px" textAlign="center">Tubosun, 2012 </Text>       
         </Box> 
+        </Grid>
 
 </Slide>
 
 
 <Slide>
         <Heading fontSize="h3">Dati</Heading>
-        <Box style={{display: 'flex', justifyContent: 'center'}}>
-          <Image width="75%" height="100%" src={datatab} alt="Map of multilingual populations" />
-        </Box> 
-        <Text fontSize="30px" textAlign="center">SelfMA dataset (2019) and randomly selected Tumblr posts</Text>       
-
+        <UnorderedList>
+          <ListItem> La lingua</ListItem>
+          <ListItem> Le lingue tonale</ListItem>
+          <ListItem> Lavoro precedente </ListItem>
+          <ListItem> Dati </ListItem>
+          <ListItem> Metodi </ListItem>
+          <ListItem> Demonstrazione </ListItem>
+      </UnorderedList>
 </Slide>
 
 
@@ -291,18 +295,45 @@ const Presentation = () => (
 
 <Grid
     flex={1}
+    gridTemplateColumns="50% 50%"
+    gridTemplateRows="100% 100%"
+    height="100%"
+  >
+
+<UnorderedList>
+
+  {/* <ListItem>Yorùbá</ListItem> */}
+      <ListItem fontSize="30px">
+      Parlata da 45,6 milioni di parlanti totali    
+      </ListItem>
+
+      <ListItem fontSize="30px">
+      È parlata principalmente nella Nigeria sud-occidentale e in parti del Benin e del Togo
+      </ListItem>
+
+      <ListItem fontSize="30px">
+      Una lingua tonale rappresentato nella ortografia: i diacritici
+
+      </ListItem>
+
+      <ListItem fontSize="30px">
+      È proibito nelle classi nigeriani ("No vernacular allowed")
+      </ListItem>
+</UnorderedList>
+
+<Grid
+    flex={1}
     gridTemplateColumns="100%"
-    gridTemplateRows="70% 30%"
+    gridTemplateRows="80% 20%"
     height="100%"
     >
-        <Box style={{display: 'flex', justifyContent: 'center'}}>
-          <Image width="60%" height="80%" src={empic} alt="Map of multilingual populations" />
-        </Box> 
-        <Box  style={{padding: 0}}>
-        <Text fontSize="30px" textAlign="center">GloVe, word2vec, FastText</Text> 
-        <Text fontSize="20px" textAlign="center">Image from <a href='https://jalammar.github.io/illustrated-word2vec/'>The Illustrated Word2Vec</a></Text> 
-        </Box> 
-    </Grid>     
+        <Box style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
+          <Image width="100%" height="90%" src={pitchest} alt="Map of multilingual populations" />
+          <Text fontSize="30px" textAlign="center">Foto di MathWorks</Text> 
+
+        </Box>
+    </Grid>    
+    </Grid> 
 </Slide>
 
 <Slide>
@@ -314,220 +345,40 @@ const Presentation = () => (
         height="80%"
   >
         <Box style={{display: 'flex', justifyContent: 'center'}}>
-          <Image width="80%" height="100%" src={basetab} alt="Map of multilingual populations" />
+          <Image width="60%" height="100%" src={irt} alt="Map of multilingual populations" />
         </Box>
-        <Text fontSize="30px" textAlign="center">Support Vector Machine on Data</Text>   
+        <Text fontSize="20px" textAlign="center">Slide di Chris Piech</Text>   
         </Grid>    
 </Slide>
 
 
-  <Slide>
-
-  <Heading fontSize="h3"> Algorithm</Heading>
-
-  <Grid
-    flex={1}
-    gridTemplateColumns="100%"
-    gridTemplateRows="80% 20%"
-    height="80%"
-    >
-    <Box style={{display: 'flex', justifyContent: 'center'}}>
-    <Image width="70%" height="100%" src={algtext} alt="Mfcc creation" />
-    </Box>
-    <Box>
-    <Text fontSize="30px" textAlign="center">[girl, boy, man, woman, male, female]</Text> 
-    <Text fontSize="30px" textAlign="center">[white, black, asian, latino, hispanic, arab, african, caucasian]</Text> 
-    </Box>
-  </Grid>
-
-  <Notes>
-  </Notes>
-
-</Slide>
- 
 <Slide>
-
-<Heading fontSize="h3"> Algorithm </Heading>
-
-<Grid
-  flex={1}
-  gridTemplateColumns="100%"
-  gridTemplateRows="80% 20%"
-  height="80%"
-  >
-  <Box style={{display: 'flex', justifyContent: 'center'}}>
-  <Image width="100%" height="100%" src={algpho} alt="Mfcc creation" />
-  </Box>
-  <Box>
-    <Text fontSize="30px" textAlign="center">: “Ford: Built With Tools, Not With Chopsticks”</Text> 
-    </Box>
-</Grid>
-
-<Notes>
-</Notes>
-
-</Slide>
-
-
-
-
-
-<Slide>
-
-  <Heading fontSize="h3"> Results - Gender</Heading>
-
-  <Grid
-    flex={1}
-    gridTemplateColumns="100%"
-    gridTemplateRows="100%"
-    height="70%"
-    >
-  
-    <Box style={{display: 'flex', justifyContent: 'center'}}>
-    <Image width="80%" height="100%" src={resgender} alt="Mfcc creation" />
-    </Box>
-
-    <Box>
-    {/* <Text fontSize="14px" textAlign="center" style={{padding: 0}}>Image from <Link target="_blank" fontSize="14px" href="https://jonathan-hui.medium.com/speech-recognition-asr-model-training-90ed50d93615">source</Link></Text>        */}
-    {/* <Text fontSize="28px" textAlign="center"> Resulting models are fine-tuned primarily on monolingual data (Yorùbá and Nigerian English) </Text>        */}
-    </Box>
-  </Grid>
-
-  <Notes>
-  </Notes>
-
-</Slide>
-
-
-<Slide>
-
-  <Heading fontSize="h3"> Results - Race</Heading>
-
-  <Grid
-    flex={1}
-    gridTemplateColumns="100%"
-    gridTemplateRows="100%"
-    height="70%"
-    >
-  
-    <Box style={{display: 'flex', justifyContent: 'center'}}>
-    <Image width="80%" height="100%" src={resrace} alt="Mfcc creation" />
-    </Box>
-
-    <Box>
-    {/* <Text fontSize="14px" textAlign="center" style={{padding: 0}}>Image from <Link target="_blank" fontSize="14px" href="https://jonathan-hui.medium.com/speech-recognition-asr-model-training-90ed50d93615">source</Link></Text>        */}
-    {/* <Text fontSize="28px" textAlign="center"> Resulting models are fine-tuned primarily on monolingual data (Yorùbá and Nigerian English) </Text>        */}
-    </Box>
-  </Grid>
-
-  <Notes>
-  </Notes>
-
-</Slide>
-
-
-<Slide>
-
-  <Heading fontSize="h3"> Results - All</Heading>
-
-  <Grid
-    flex={1}
-    gridTemplateColumns="100%"
-    gridTemplateRows="100%"
-    height="70%"
-    >
-  
-    <Box style={{display: 'flex', justifyContent: 'center'}}>
-    <Image width="80%" height="100%" src={resall} alt="Mfcc creation" />
-    </Box>
-
-    <Box>
-    {/* <Text fontSize="14px" textAlign="center" style={{padding: 0}}>Image from <Link target="_blank" fontSize="14px" href="https://jonathan-hui.medium.com/speech-recognition-asr-model-training-90ed50d93615">source</Link></Text>        */}
-    {/* <Text fontSize="28px" textAlign="center"> Resulting models are fine-tuned primarily on monolingual data (Yorùbá and Nigerian English) </Text>        */}
-    </Box>
-  </Grid>
-
-  <Notes>
-  </Notes>
-
-</Slide>
-
-
-<Slide>
-      <Heading fontSize="h3"> Finding Microaggressions 'In The Wild'</Heading>
-
-      <UnorderedList>
-      <Appear>
-          <ListItem fontSize="40px">
-          We use our unsupervised model to label unseen instances from another domain (Twitter)
-          </ListItem>
-       </Appear>
-      <Appear>
-        <ListItem fontSize="40px">We want to understand the false positive results and the potential harm the model could cause.</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem fontSize="40px">We automatically label 256,843 tweets for gender and 373,631 tweets for race.</ListItem>
-      </Appear>
-    </UnorderedList>
-
-  </Slide>
-
-  <Slide>
-        <Heading fontSize="h3"> Finding Microaggressions 'In The Wild'</Heading>
-
-        <Box>
-          <Text fontSize="48px" textAlign="center"> Saying ”Arrested Development isn’t funny” in an office full of women just to
-feel something </Text>
-        </Box>
-        <Box>
-          <Text fontSize="48px" textAlign="center"> “Men have moustaches, women have oversized bracelets”</Text>
-        </Box>
-        
-      
+        <Heading fontSize="h3">Bayseian Item Response Theory</Heading>
+        <UnorderedList>
+          <ListItem> La lingua</ListItem>
+          <ListItem> Le lingue tonale</ListItem>
+          <ListItem> Lavoro precedente </ListItem>
+          <ListItem> Dati </ListItem>
+          <ListItem> Metodi </ListItem>
+          <ListItem> Demonstrazione </ListItem>
+      </UnorderedList>
 </Slide>
 
 <Slide>
-        <Heading fontSize="h3"> Finding Microaggressions 'In The Wild'</Heading>
-
-        <Box>
-          <Text fontSize="48px" textAlign="center"> “why are you being so dramatic? just say I’m not originally arab, you don’t have to fight about it” </Text>
-        </Box>
-        <Box>
-          <Text fontSize="48px" textAlign="center"> “I will need to explain that to the chinese old lady who works at my school’s
-administrative office”</Text>
-        </Box>
-        
-      
+<FlexBox height="100%" flexDirection="column">
+        <Heading margin="0px" color="primary" fontSize="75px">
+        <i>Clicca qui per la demonstrazione</i>
+        </Heading>
+      </FlexBox>
 </Slide>
-
-
-
-
-  <Slide>
-      <Heading fontSize="h3"> Conclusions</Heading>
-
-      <UnorderedList>
-      <Appear>
-          <ListItem fontSize="40px">
-          We have an interpretable, unsupervised algorithm to automatically detect microaggresisons.
-          </ListItem>
-       </Appear>
-      <Appear>
-        <ListItem fontSize="40px">word2vec and FastText work almost as well as each other with this method</ListItem>
-      </Appear>
-      <Appear>
-        <ListItem fontSize="40px">We were able to use this method to detect possible microaggresisons 'in the wild'.</ListItem>
-      </Appear>
-    </UnorderedList>
-
-  </Slide>
-
-
 
   <Slide>
       <FlexBox height="100%" flexDirection="column">
         <Heading margin="0px" fontSize="150px">
-          <i>Thank you!</i>
+          <i>Grazie mille!</i>
+        </Heading>
+        <Heading margin="0px" fontSize="50px">
+          <i>... per la vostra pazienza con me!</i>
         </Heading>
       </FlexBox>
       <Notes>
