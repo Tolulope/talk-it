@@ -123,12 +123,12 @@ const Presentation = () => (
       // backgroundImage="url(https://source.unsplash.com/lZCHy8PLyyo/1600x900)"
       backgroundOpacity={0.7}
     >
-      <FlexBox height="100%" flexDirection="column">
+        <FlexBox height="100%" flexDirection="column">
         <Heading margin="0px" color="primary" fontSize="75px">
-          <i>Fighting Bias with Bias: Unsupervised Microaggression Detection</i>
+        <i>L'utlizaione dei computer per aiutare la pronuncia del Yoruba</i>
         </Heading>
         <Heading margin="0px" color="primary" fontSize="36px">
-          Tolúlọpẹ́ Ògúnrẹ̀mí, Nazanin Sabri, Valerio Basile, Tommaso Caselli
+          Tolúlọpẹ́ Ògúnrẹ̀mí
         </Heading>
         {/* <Heading margin="0px 32px" color="primary" fontSize="h3">
           Where you can write your decks in JSX, Markdown, or MDX!
@@ -141,42 +141,12 @@ const Presentation = () => (
 
 
     <Slide>
-      <Heading  margin="0px 32px" color="primary" fontSize="h3">Leveraging Bias in Pre-trained Word Embeddings for Unsupervised Microaggression Detection</Heading>
-        <Text fontSize="36px"> Joint work with</Text>
-        <Grid
-      flex={1}
-      gridTemplateColumns="33% 33% 33%"
-      gridTemplateRows="100%"
-      height="100%"
-      >
-        <Box style={{display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center'}}>
-        <Image style={{borderRadius: '50%'}} width="50%" height="75%" src={nazanin} alt="Mfcc creation" />
-        <Text fontSize="36px"> Nazanin Sabri</Text>
-        </Box>
-
-        <Box style={{display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center'}}>
-        <Image style={{borderRadius: '50%'}} width="50%" height="75%" src={valerio} alt="Mfcc creation" />
-        <Text fontSize="36px"> Valerio Basile</Text>
-        </Box>
-
-        <Box style={{display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center'}}>
-        <Image style={{borderRadius: '50%'}} width="50%" height="75%" src={tommaso} alt="Mfcc creation" />
-        <Text fontSize="36px"> Tommaso Caselli</Text>
-        </Box>
-      </Grid>
-    </Slide> 
-
-
-    <Slide>
       <Heading  margin="0px 32px" color="primary" fontSize="h3">Outline</Heading>
       <UnorderedList>
 
-          <ListItem>Motivation</ListItem>
-          <ListItem>Background</ListItem>
-
-          <ListItem>
-            Data
-          </ListItem>
+          <ListItem>La lingua</ListItem>
+          <ListItem>Le lingue tonale</ListItem>
+          <ListItem> P </ListItem>
           <ListItem>
             Algorithm
           </ListItem>
@@ -189,39 +159,85 @@ const Presentation = () => (
       </UnorderedList>
     </Slide> 
 
+<Slide>
+      <Heading fontSize="h3" margin="0px"> La lingua: Yorùbá</Heading>
+
+    <Grid
+    flex={1}
+    gridTemplateColumns="60% 40%"
+    gridTemplateRows="100% 100%"
+    height="100%"
+  >
+      <UnorderedList>
+
+      <Appear>
+        {/* <ListItem>Yorùbá</ListItem> */}
+            <ListItem fontSize="30px">
+            Parlata da 45,6 milioni di parlanti totali    
+            </ListItem>
+
+            <ListItem fontSize="30px">
+            È parlata principalmente nella Nigeria sud-occidentale e in parti del Benin e del Togo
+            </ListItem>
+
+            <ListItem fontSize="30px">
+            Una lingua tonale rappresentato nella ortografia: i diacritici
+
+            </ListItem>
+
+            <ListItem fontSize="30px">
+            È proibito nelle classi nigeriani ("No vernacular allowed")
+            </ListItem>
+      </Appear>
+    </UnorderedList>
+
+      <Grid
+      flex={1}
+      gridTemplateColumns="100%"
+      gridTemplateRows="50% 50%"
+      height="100%"
+      >
+
+      <Box style={{display: 'flex', justifyContent: 'center', paddingTop: '20px'}}>
+        <Image width="70%" height="70%" src={yormap} alt="Map of multilingual populations" />
+      </Box> 
+
+
+      <Box style={{display: 'flex', justifyContent: 'center'}}>
+        <Image width="70%" height="70%" src={yormap} alt="Map of multilingual populations" />
+      </Box> 
+      </Grid>
+  </Grid>
+  </Slide>
 
 
 
 
 
 <Slide>
-        <Heading fontSize="h3"> What is a microaggresison?</Heading>
+        <Heading fontSize="h3"> Le lingue tonale</Heading>
 
         <Box>
-          <Text fontSize="48px" textAlign="center"> Microaggressions are brief, everyday exchanges that denigrate stigmatised and culturally marginalised groups. </Text>
-          <Text fontSize="20px" textAlign="center"> (Mariam-Webster) </Text>         
+          <Text fontSize="48px" textAlign="center"> Una lingua tonale (o lingua a toni) è una lingua in cui la variazione di tono di una stessa sillaba ne determina il significato o l'appartenenza a una classe grammaticale.</Text>
+          <Text fontSize="20px" textAlign="center"> (Wikipedia) </Text>         
         </Box>
-        <Box>
-          <Text fontSize="48px" textAlign="center" color="secondary"> They are subtle manifestations of bias  (Breitfeller et al., 2019). </Text>
-        </Box>
-        
-      
 </Slide>
 
 <Slide>
-        <Heading fontSize="h3"> What is a microaggresison?</Heading>
+        <Heading fontSize="h3"> Le lingue tonale</Heading>
 
         <Box>
-          <Text fontSize="48px" textAlign="center"> They are not always perceived as hurtful by either party, and they can often be detected as positive statements by current hate-speech detection systems. </Text>
-          <Text fontSize="20px" textAlign="center"> (Breitfeller et al., 2019) </Text>         
-        </Box>
-        <Box>
-          <Text fontSize="48px" textAlign="center" color="secondary"> E.g. "You speak English so well!" </Text>
-        </Box>
-        
-      
+          <Text fontSize="48px" textAlign="center"> Sound demos with FO </Text>
+        </Box>    
 </Slide>
 
+<Slide>
+<FlexBox height="100%" flexDirection="column">
+        <Heading margin="0px" color="primary" fontSize="75px">
+        <i>Le lingue tonale sono difficile di insengnare</i>
+        </Heading>
+      </FlexBox>
+</Slide>
 
 {/* <Slide>
         <Heading fontSize="h3"> Word embeddings are biased</Heading>
@@ -239,7 +255,18 @@ const Presentation = () => (
 
 
 <Slide>
-        <Heading fontSize="h3"> Word embeddings are biased</Heading>
+        <Heading fontSize="h3"> Lavoro precedente</Heading>
+        <Box style={{display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center'}}>
+          <Image width="65%" height="65%" src={biasfig} alt="Map of multilingual populations" />
+          <Text fontSize="30px" textAlign="center">(Caliskan et al., 2016; Bolukbasi et al., 2016; Garg et al., 2017) </Text>       
+        </Box> 
+
+</Slide>
+
+
+
+<Slide>
+        <Heading fontSize="h3"> Lavoro precedente</Heading>
         <Box style={{display:'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center'}}>
           <Image width="65%" height="65%" src={biasfig} alt="Map of multilingual populations" />
           <Text fontSize="30px" textAlign="center">(Caliskan et al., 2016; Bolukbasi et al., 2016; Garg et al., 2017) </Text>       
@@ -249,7 +276,7 @@ const Presentation = () => (
 
 
 <Slide>
-        <Heading fontSize="h3">Data</Heading>
+        <Heading fontSize="h3">Dati</Heading>
         <Box style={{display: 'flex', justifyContent: 'center'}}>
           <Image width="75%" height="100%" src={datatab} alt="Map of multilingual populations" />
         </Box> 
@@ -260,7 +287,7 @@ const Presentation = () => (
 
 
 <Slide>
-<Heading fontSize="h3"> Word Embeddings Used</Heading>
+<Heading fontSize="h3"> Estorcendo i valori F0 </Heading>
 
 <Grid
     flex={1}
@@ -279,7 +306,7 @@ const Presentation = () => (
 </Slide>
 
 <Slide>
-        <Heading fontSize="h3">Baseline</Heading>
+        <Heading fontSize="h3">Bayseian Item Response Theory</Heading>
         <Grid
         flex={1}
         gridTemplateColumns="100%"
@@ -307,6 +334,10 @@ const Presentation = () => (
     <Box style={{display: 'flex', justifyContent: 'center'}}>
     <Image width="70%" height="100%" src={algtext} alt="Mfcc creation" />
     </Box>
+    <Box>
+    <Text fontSize="30px" textAlign="center">[girl, boy, man, woman, male, female]</Text> 
+    <Text fontSize="30px" textAlign="center">[white, black, asian, latino, hispanic, arab, african, caucasian]</Text> 
+    </Box>
   </Grid>
 
   <Notes>
@@ -327,6 +358,9 @@ const Presentation = () => (
   <Box style={{display: 'flex', justifyContent: 'center'}}>
   <Image width="100%" height="100%" src={algpho} alt="Mfcc creation" />
   </Box>
+  <Box>
+    <Text fontSize="30px" textAlign="center">: “Ford: Built With Tools, Not With Chopsticks”</Text> 
+    </Box>
 </Grid>
 
 <Notes>
