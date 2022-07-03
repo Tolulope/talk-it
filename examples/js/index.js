@@ -134,7 +134,7 @@ const Presentation = () => (
         </Heading> */}
       </FlexBox>
       <Notes>
-        Hello everyone! 
+      Ciao a tutti ! Grazie per restate per questa presentazione. Oggi parlerò sul progetto che ho cominciato quest’anno scolastico. Il titolo italiano è….
       </Notes>
     </Slide>
 
@@ -150,6 +150,10 @@ const Presentation = () => (
           <ListItem> Metodi </ListItem>
           <ListItem> Demonstrazione </ListItem>
       </UnorderedList>
+
+      <Notes>
+      Vado cominciare a introdurre la lingua e le lingue tonale in generale. Poi presente il lavoro precedente collegato a questo progetto e poi i metodi e una dimostrazione di cosa ho fatto sul progetto.
+      </Notes>
     </Slide> 
 
 <Slide>
@@ -202,6 +206,15 @@ const Presentation = () => (
       </Grid>
       </Appear>
   </Grid>
+  <Notes>
+    <ul>
+  <li>Ci sono tre toni officiali: il alto, rappresentato con l’accento acuto sulle vocali, il medio (nessuno accennto sulle vocali) e il basso con l’accento grave sulle vocali.</li>
+
+<li>Vediamo questo con la parola Yorùbá: o ha tono medio, u ha tono basso e a ha tonno alto </li>
+
+<li> La lingua è proibito nelle classi nigeriani, quindi e difficile di trovare le persone fuori da Nigeria (soprattutto gli figli degli immigrati) che possono parlare la lingua fluentemente. </li>
+</ul>
+  </Notes>
   </Slide>
 
 
@@ -209,7 +222,7 @@ const Presentation = () => (
 
 
 <Slide>
-        <Heading fontSize="h3"> Le lingue tonale</Heading>
+        <Heading fontSize="h3"> Le lingue tonali</Heading>
 
         <Box>
           <Text fontSize="48px" textAlign="center"> Una lingua tonale (o lingua a toni) è una lingua in cui la variazione di tono di una stessa sillaba ne determina il significato o l'appartenenza a una classe grammaticale.</Text>
@@ -231,6 +244,9 @@ const Presentation = () => (
         <i>Le lingue tonale sono difficile di insengnare</i>
         </Heading>
       </FlexBox>
+      <Notes>
+      Il modo il più utilizzato nella letteratura è Elicited Immitation (Imitazione Suscitato nel mio italiano). Qui l’insengnante ripete una parola a pronunciare ripetutamente fino alla pronuncia corretta del studento/a. Questo modo è quasi impossibile a fare in una classe di trenta studenti, ma è importantissimo per la pronuncia corretta delle lingue tonali.
+      </Notes>
 </Slide>
 
 {/* <Slide>
@@ -254,7 +270,7 @@ const Presentation = () => (
           <Image width="65%" height="130%" src={chunwork} alt="Map of multilingual populations" />
           <Text fontSize="30px" textAlign="center"> Chun et al., 2011 </Text>       
         </Box> 
-
+<Notes>Dieci anni fa, Chun et al hanno fatto gli esperimenti sulla la pronuncia del cinese. Hanno visto che si gli insegnanti fanno vedere gli studenti uno grafico di loro toni quando pronunciano una parola tonale vicino a uno grafico di toni corretti, la pronuncia degli studenti migliora più velocemente.</Notes>
 </Slide>
 
 
@@ -272,19 +288,25 @@ const Presentation = () => (
           <Text fontSize="30px" textAlign="center">Tubosun, 2012 </Text>       
         </Box> 
         </Grid>
-
+  <Notes>
+  Inoltre, Tubosun ha fatto L’imitazione suscitato (Elicited Immitation) delle parole Yorùbá con varie perosoni - gli studenti di Yorùbá, i parlanti di cinese (una lingua tonale), i parlanti delle lingue europee e i parlanti di solamente inglese. 
+  </Notes>
 </Slide>
 
 
 <Slide>
         <Heading fontSize="h3">Dati</Heading>
         <UnorderedList>
-          <ListItem> La lingua</ListItem>
-          <ListItem> Le lingue tonale</ListItem>
-          <ListItem> Lavoro precedente </ListItem>
-          <ListItem> Dati </ListItem>
-          <ListItem> Metodi </ListItem>
-          <ListItem> Demonstrazione </ListItem>
+          <ListItem> I registrazioni degli studenti nel lavoro di Tubosun </ListItem>
+          <ListItem> A fare 
+
+            <ul>
+              <li>
+              Gli annotazioni degli insegnanti di Yorùbá di ogni registrazione
+              </li>
+            </ul>
+
+          </ListItem>
       </UnorderedList>
 </Slide>
 
@@ -304,20 +326,16 @@ const Presentation = () => (
 
   {/* <ListItem>Yorùbá</ListItem> */}
       <ListItem fontSize="30px">
-      Parlata da 45,6 milioni di parlanti totali    
+      Quando ho gli annotazioni, posso addestrare uno classifier 
       </ListItem>
 
       <ListItem fontSize="30px">
-      È parlata principalmente nella Nigeria sud-occidentale e in parti del Benin e del Togo
+      Il suono ha un sacco di aspetti e siamo interessati a solamente il tono
       </ListItem>
 
       <ListItem fontSize="30px">
-      Una lingua tonale rappresentato nella ortografia: i diacritici
+      Utilizziamo il algoritmo di Wang (2005) per estrarre dieci aspetti di F0 per ogni registrazione
 
-      </ListItem>
-
-      <ListItem fontSize="30px">
-      È proibito nelle classi nigeriani ("No vernacular allowed")
       </ListItem>
 </UnorderedList>
 
@@ -335,6 +353,28 @@ const Presentation = () => (
     </Grid>    
     </Grid> 
 </Slide>
+
+<Slide>
+        <Heading fontSize="h3"> Item Response Theory</Heading>
+
+        <Box>
+          <Text fontSize="48px" textAlign="center">  I modelli dell’IRT hanno l’obiettivo di calcolare la probabilità che un soggetto ha di rispondere correttamente a ciascun item del test somministrato, in funzione del livello di abilità posseduto dal soggetto stesso e dei parametri dell’item analizzato.</Text>
+          <Text fontSize="20px" textAlign="center"> (Psicoterapia.it) </Text>         
+        </Box>
+</Slide>
+
+<Slide>
+      <Heading  margin="0px 32px" color="primary" fontSize="h3">Outline</Heading>
+      <UnorderedList>
+
+          <ListItem> Nel questo progetto una item e una parola Yorùbá </ListItem>
+          <ListItem> Quindi vogliamo sapere o calcolare la probabilità che uno/a studento/a pronuncierà una parola di Yorùbá correntemente </ListItem>
+      </UnorderedList>
+
+      <Notes>
+      </Notes>
+    </Slide> 
+
 
 <Slide>
         <Heading fontSize="h3">Bayseian Item Response Theory</Heading>
@@ -360,9 +400,21 @@ const Presentation = () => (
           <ListItem> Lavoro precedente </ListItem>
           <ListItem> Dati </ListItem>
           <ListItem> Metodi </ListItem>
-          <ListItem> Demonstrazione </ListItem>
+          <ListItem> Dimonstrazione </ListItem>
       </UnorderedList>
 </Slide>
+
+<Slide>
+      <Heading  margin="0px 32px" color="primary" fontSize="h3">Outline</Heading>
+      <UnorderedList>
+
+          <ListItem> Si possiamo apprendere la difficultà di pronunciare una parola, possiamo produrre una stima del livello di abilità (sotto forma di distribuzione normale) di ogni studento. Dopo ogni avviso successivo, i parametri della distribuzione cambieranno. </ListItem>
+          <ListItem> Possiamo campionare la distribuzione per presentare il studento la ottima parola per lui nel quello momento. </ListItem>
+      </UnorderedList>
+
+      <Notes>
+      </Notes>
+    </Slide> 
 
 <Slide>
 <FlexBox height="100%" flexDirection="column">
