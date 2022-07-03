@@ -148,7 +148,7 @@ const Presentation = () => (
           <ListItem> Lavoro precedente </ListItem>
           <ListItem> Dati </ListItem>
           <ListItem> Metodi </ListItem>
-          <ListItem> Demonstrazione </ListItem>
+          <ListItem> Dimonstrazione </ListItem>
       </UnorderedList>
 
       <Notes>
@@ -364,7 +364,7 @@ const Presentation = () => (
 </Slide>
 
 <Slide>
-      <Heading  margin="0px 32px" color="primary" fontSize="h3">Outline</Heading>
+      <Heading  margin="0px 32px" color="primary" fontSize="h3">Item Response Theory</Heading>
       <UnorderedList>
 
           <ListItem> Nel questo progetto una item e una parola Yorùbá </ListItem>
@@ -392,7 +392,7 @@ const Presentation = () => (
 </Slide>
 
 
-<Slide>
+{/* <Slide>
         <Heading fontSize="h3">Bayseian Item Response Theory</Heading>
         <UnorderedList>
           <ListItem> La lingua</ListItem>
@@ -402,10 +402,10 @@ const Presentation = () => (
           <ListItem> Metodi </ListItem>
           <ListItem> Dimonstrazione </ListItem>
       </UnorderedList>
-</Slide>
+</Slide> */}
 
 <Slide>
-      <Heading  margin="0px 32px" color="primary" fontSize="h3">Outline</Heading>
+      <Heading  margin="0px 32px" color="primary" fontSize="h3">Bayseian Item Response Theory</Heading>
       <UnorderedList>
 
           <ListItem> Si possiamo apprendere la difficultà di pronunciare una parola, possiamo produrre una stima del livello di abilità (sotto forma di distribuzione normale) di ogni studento. Dopo ogni avviso successivo, i parametri della distribuzione cambieranno. </ListItem>
