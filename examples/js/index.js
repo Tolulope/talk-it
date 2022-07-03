@@ -124,7 +124,7 @@ const Presentation = () => (
     >
         <FlexBox height="100%" flexDirection="column">
         <Heading margin="0px" color="primary" fontSize="75px">
-        <i>L'utlizaione dei computer per aiutare la pronuncia del Yoruba</i>
+        <i>L'utilizzazione dei computer per aiutare la pronuncia del Yoruba</i>
         </Heading>
         <Heading margin="0px" color="primary" fontSize="36px">
           Tolúlọpẹ́ Ògúnrẹ̀mí
@@ -144,7 +144,7 @@ const Presentation = () => (
       <UnorderedList>
 
           <ListItem> La lingua</ListItem>
-          <ListItem> Le lingue tonale</ListItem>
+          <ListItem> Le lingue tonali</ListItem>
           <ListItem> Lavoro precedente </ListItem>
           <ListItem> Dati </ListItem>
           <ListItem> Metodi </ListItem>
@@ -231,7 +231,7 @@ const Presentation = () => (
 </Slide>
 
 <Slide>
-        <Heading fontSize="h3"> Le lingue tonale</Heading>
+        <Heading fontSize="h3"> Le lingue tonali</Heading>
 
         <Box>
           <Text fontSize="48px" textAlign="center"> Sound demos with FO </Text>
@@ -241,11 +241,11 @@ const Presentation = () => (
 <Slide>
 <FlexBox height="100%" flexDirection="column">
         <Heading margin="0px" color="primary" fontSize="75px">
-        <i>Le lingue tonale sono difficile di insengnare</i>
+        <i>Le lingue tonali sono difficili a insengnare</i>
         </Heading>
       </FlexBox>
       <Notes>
-      Il modo il più utilizzato nella letteratura è Elicited Immitation (Imitazione Suscitato nel mio italiano). Qui l’insengnante ripete una parola a pronunciare ripetutamente fino alla pronuncia corretta del studento/a. Questo modo è quasi impossibile a fare in una classe di trenta studenti, ma è importantissimo per la pronuncia corretta delle lingue tonali.
+      Il modo il più utilizzato nella letteratura è Elicited Immitation (Imitazione Suscitato nel mio italiano). Qui l’insengnante ripete una parola a pronunciare ripetutamente fino alla pronuncia corretta del studente. Questo modo è quasi impossibile a fare in una classe di trenta studenti, ma è importantissimo per la pronuncia corretta delle lingue tonali.
       </Notes>
 </Slide>
 
@@ -313,7 +313,7 @@ const Presentation = () => (
 
 
 <Slide>
-<Heading fontSize="h3"> Estorcendo i valori F0 </Heading>
+<Heading fontSize="h3"> Estrazione dei valori F0 </Heading>
 
 <Grid
     flex={1}
@@ -330,7 +330,7 @@ const Presentation = () => (
       </ListItem>
 
       <ListItem fontSize="30px">
-      Il suono ha un sacco di aspetti e siamo interessati a solamente il tono
+      Il suono ha diversi aspetti e siamo interessati a solamente il tono
       </ListItem>
 
       <ListItem fontSize="30px">
@@ -367,8 +367,8 @@ const Presentation = () => (
       <Heading  margin="0px 32px" color="primary" fontSize="h3">Item Response Theory</Heading>
       <UnorderedList>
 
-          <ListItem> Nel questo progetto una item e una parola Yorùbá </ListItem>
-          <ListItem> Quindi vogliamo sapere o calcolare la probabilità che uno/a studento/a pronuncierà una parola di Yorùbá correntemente </ListItem>
+          <ListItem> In questo progetto un item e una parola Yorùbá </ListItem>
+          <ListItem> Quindi vogliamo sapere o calcolare la probabilità che un studente pronuncierà una parola di Yorùbá correntemente </ListItem>
       </UnorderedList>
 
       <Notes>
@@ -408,8 +408,8 @@ const Presentation = () => (
       <Heading  margin="0px 32px" color="primary" fontSize="h3">Bayseian Item Response Theory</Heading>
       <UnorderedList>
 
-          <ListItem> Si possiamo apprendere la difficultà di pronunciare una parola, possiamo produrre una stima del livello di abilità (sotto forma di distribuzione normale) di ogni studento. Dopo ogni avviso successivo, i parametri della distribuzione cambieranno. </ListItem>
-          <ListItem> Possiamo campionare la distribuzione per presentare il studento la ottima parola per lui nel quello momento. </ListItem>
+          <ListItem> Se possiamo apprendere la difficultà di pronunciare una parola, possiamo produrre una stima del livello di abilità (sotto forma di distribuzione normale) di ogni studente. Dopo ogni avviso successivo, i parametri della distribuzione cambieranno. </ListItem>
+          <ListItem> Possiamo campionare la distribuzione per presentare il studente la ottima parola per lui in quel momento. </ListItem>
       </UnorderedList>
 
       <Notes>
