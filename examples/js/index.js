@@ -46,6 +46,7 @@ import kolawork from './kolawork.png'
 import chunwork from './chunwork.png'
 
 import pitchest from './pitchest.png'
+import yorubaland from './yorubaland.jpg'
 
 import {
   FlexBox,
@@ -183,7 +184,7 @@ const Presentation = () => (
             </ListItem>
 
             <ListItem fontSize="30px">
-            È proibito nelle classi nigeriani ("No vernacular allowed")
+            È proibita nelle classi nigeriani ("No vernacular allowed")
             </ListItem>
       </Appear>
     </UnorderedList>
@@ -201,7 +202,7 @@ const Presentation = () => (
 
 
       <Box style={{display: 'flex', justifyContent: 'center'}}>
-        <Image width="70%" height="70%" src={yormap} alt="Map of multilingual populations" />
+        <Image width="70%" height="70%" src={yorubaland} alt="Map of multilingual populations" />
       </Box> 
       </Grid>
       </Appear>
@@ -212,10 +213,10 @@ const Presentation = () => (
 
 <li>Vediamo questo con la parola Yorùbá: o ha tono medio, u ha tono basso e a ha tonno alto </li>
 
-<li> La lingua è proibito nelle classi nigeriani, quindi e difficile di trovare le persone fuori da Nigeria (soprattutto gli figli degli immigrati) che possono parlare la lingua fluentemente. </li>
+<li> La lingua  proibita nelle classi nigeriani, quindi e difficile di trovare le persone fuori da Nigeria (soprattutto gli figli degli immigrati) che possono parlare la lingua fluentemente. </li>
 </ul>
   </Notes>
-  </Slide>
+  </Slide>è
 
 
 
@@ -367,7 +368,7 @@ const Presentation = () => (
       <Heading  margin="0px 32px" color="primary" fontSize="h3">Item Response Theory</Heading>
       <UnorderedList>
 
-          <ListItem> In questo progetto un item e una parola Yorùbá </ListItem>
+          <ListItem> In questo progetto un item è una parola Yorùbá </ListItem>
           <ListItem> Quindi vogliamo sapere o calcolare la probabilità che un studente pronuncierà una parola di Yorùbá correntemente </ListItem>
       </UnorderedList>
 
@@ -419,7 +420,7 @@ const Presentation = () => (
 <Slide>
 <FlexBox height="100%" flexDirection="column">
         <Heading margin="0px" color="primary" fontSize="75px">
-        <i>Clicca qui per la demonstrazione</i>
+        <i><a href="https://learn-tone.netlify.app/" target="_blank">Clicca qui per la demonstrazione</a></i>
         </Heading>
       </FlexBox>
 </Slide>

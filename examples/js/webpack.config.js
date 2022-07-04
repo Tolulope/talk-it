@@ -15,7 +15,7 @@ module.exports = {
   externals: {},
   plugins: [
     new HtmlWebpackPlugin({
-      title: "L'utlizaione dei computer per aiutare la pronuncia del Yoruba",
+      title: "L'utilizzazione dei computer per aiutare la pronuncia del Yoruba",
       template: `./index.html`
     })
   ],
