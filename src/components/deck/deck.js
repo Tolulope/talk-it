@@ -178,13 +178,16 @@ const Deck = forwardRef(
       disableInteractivity
         ? {}
         : {
-            left: () => stepBackward(),
-            right: () => stepForward(), 
-            space: () => stepForward(),
-            enter: () => stepForward(),
-            up: () => stepBackward(), 
-            down: () => stepForward(),
-            'f': () => toggleFullScreen()
+          left: () => stepBackward(),
+          right: () => stepForward(), 
+          space: () => stepForward(),
+          enter: () => stepForward(),
+          up: () => stepBackward(), 
+          down: () => stepForward(),
+          pageup: () => stepForward(), 
+          pagedown: () => stepBackward(),
+          esc : () => toggleFullScreen(),
+          'f': () => toggleFullScreen()
           },
       []
     );
